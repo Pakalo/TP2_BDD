@@ -147,15 +147,3 @@ npm start
 | avant     | `/tasks?avant=2024-12-31` | Tâches avant une date |
 | apres     | `/tasks?apres=2024-01-01` | Tâches après une date |
 | q         | `/tasks?q=rapport`        | Recherche textuelle   |
-
-## 👥 Contribution
-
-1. Fork le projet
-2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
-3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
-
-## 📝 License
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
