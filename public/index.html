@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestionnaire de Tâches</h1>
+            <button onclick="openTaskModal()">Nouvelle Tâche</button>
+        </header>
+
+        <section class="filters">
+            <h2>Filtres</h2>
+            <div class="filter-controls">
+                <select id="statusFilter">
+                    <option value="">Tous les statuts</option>
+                    <option value="à faire">À faire</option>
+                    <option value="en cours">En cours</option>
+                    <option value="terminée">Terminée</option>
+                    <option value="annulée">Annulée</option>
+                </select>
+                
+                <select id="priorityFilter">
+                    <option value="">Toutes les priorités</option>
+                    <option value="basse">Basse</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="haute">Haute</option>
+                    <option value="critique">Critique</option>
+                </select>
+                
+                <select id="categoryFilter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="perso">Personnel</option>
+                    <option value="travail">Travail</option>
+                    <option value="projet">Projet</option>
+                </select>
+                
+                <input type="text" id="searchInput" placeholder="Rechercher une tâche...">
+                
+                <button onclick="applyFilters()">Appliquer les filtres</button>
+            </div>
+        </section>
+
+        <main id="tasksList">
+            <!-- Les tâches seront injectées ici -->
+        </main>
+    </div>
+
+    <!-- Modal pour ajouter/modifier une tâche -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('taskModal')">&times;</span>
+            <h2 id="modalTitle">Modifier la tâche</h2>
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                
+                <div class="form-group">
+                    <label for="titre">Titre</label>
+                    <input type="text" id="titre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="echeance">Date d'échéance</label>
+                    <input type="date" id="echeance" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="statut">Statut</label>
+                    <select id="statut" required>
+                        <option value="à faire">À faire</option>
+                        <option value="en cours">En cours</option>
+                        <option value="terminée">Terminée</option>
+                        <option value="annulée">Annulée</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priorite">Priorité</label>
+                    <select id="priorite" required>
+                        <option value="basse">Basse</option>
+                        <option value="moyenne">Moyenne</option>
+                        <option value="haute">Haute</option>
+                        <option value="critique">Critique</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="categorie">Catégorie</label>
+                    <select id="categorie" required>
+                        <option value="perso">Personnel</option>
+                        <option value="travail">Travail</option>
+                        <option value="projet">Projet</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Enregistrer les modifications</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal pour les détails d'une tâche -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content details-modal-content">
+            <span class="close" onclick="closeModal('detailsModal')">&times;</span>
+            <div id="taskDetails">
+                <!-- Le contenu sera injecté ici par JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html> 
