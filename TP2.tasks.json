@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "67e27a032289302a8d5a6af1"
+  },
+  "titre": "Test",
+  "description": "dzdzd",
+  "echeance": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "statut": "à faire",
+  "priorite": "basse",
+  "etiquettes": [],
+  "dateCreation": {
+    "$date": "2025-03-25T09:40:19.723Z"
+  },
+  "sousTaches": [
+    {
+      "titre": "LALAAL",
+      "statut": "à faire",
+      "echeance": {
+        "$date": "2025-03-25T00:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "67e27a0d2289302a8d5a6af7"
+      }
+    },
+    {
+      "titre": "LALAL",
+      "statut": "à faire",
+      "echeance": {
+        "$date": "2025-03-25T00:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "67e27a102289302a8d5a6afd"
+      }
+    }
+  ],
+  "commentaires": [
+    {
+      "auteur": {
+        "nom": "Utilisateur",
+        "prenom": "Test",
+        "email": "test@example.com"
+      },
+      "contenu": "LALALLALA",
+      "_id": {
+        "$oid": "67e27a162289302a8d5a6b05"
+      },
+      "date": {
+        "$date": "2025-03-25T09:40:38.314Z"
+      }
+    }
+  ],
+  "historiqueModifications": [],
+  "__v": 3
+}]
